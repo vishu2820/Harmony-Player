@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="music.css">
+    <title>Harmony Player</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <h2>Harmony Player</h2>
+        </div>
+        <div class="navbar-right">
+            <img src="/images/Logo.png" alt="Logo" class="navbar-logo">
+        </div>
+    </nav>
+    <div id="app">
+        <h1>Your Playlist</h1>
+        <div class="browse-folder">
+            <label for="folderInput">
+                <i class="fas fa-folder-open"></i> Browse Your Folder
+            </label>
+            <input type="file" id="folderInput" webkitdirectory directory multiple>
+        </div>
+        <div id="contentWrapper">
+            <ul id="songList"></ul>
+            <div id="audioNavbar">
+                <div id="currentSong"></div>
+                <audio id="audioPlayer" controls></audio>
+                <div id="controls">
+                    <i class="fas fa-step-backward" id="prevButton"></i>
+                    <i class="fas fa-step-forward" id="nextButton"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="music.js"></script>
+</body>
+</html>

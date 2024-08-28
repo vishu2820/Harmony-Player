@@ -1,0 +1,188 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #131312;
+    color: #ecf0f1;
+}
+
+#app {
+    text-align: center;
+    background-color: #111727;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    max-width: 2000px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.navbar {
+    background-color: #111727; /* Change the background color as needed */
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar h1{
+    font-size: 20px;
+    margin: 15px 0 0 20px;
+    font-weight: 500;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px #131312;
+}
+h1 {
+    font-size: 32px;
+    margin: 10px;
+    position: center;
+    top: 5px;
+    right: 10px;
+    color: #ecf0f1;
+}
+
+.browse-folder {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.browse-folder label {
+    display: block;
+    padding: 15px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.browse-folder input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.browse-folder label:hover {
+    background-color: #2980b9;
+}
+
+.browse-folder i {
+    margin-right: 10px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+#contentWrapper {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: calc(100vh - 80px); /* Adjust based on your header and footer heights */
+}
+
+#songList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    margin-bottom: 30px; /* Adjust the margin as needed */
+}
+
+#songList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 15px;
+    border-bottom: 1px solid #2c3e50;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#songList li:last-child {
+    border-bottom: none;
+}
+
+#songList li:hover {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.play-icon {
+    margin-right: 10px;
+}
+
+.song-name {
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#currentSong {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 50px;
+    color: #ecf0f1;
+}
+
+#audioPlayer {
+    width: 60%;
+    background: transparent; /* Set the background to transparent */
+    border: none; /* Remove the border */
+}
+
+#audioNavbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #34495e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#controls i {
+    font-size: 24px;
+    margin: 0 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#controls i:hover {
+    color: #3498db;
+}
